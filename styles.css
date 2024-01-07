@@ -1,0 +1,438 @@
+/* Name: Yeqing Xia
+Date: Nov. 17, 2023
+Section: CST 8285 section 303
+Description: css for common, index, login, signup, tools manage */
+
+/* ==================== */
+/* common  */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background: url(../imgs/background.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.body-flex-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h2 {
+  margin: 8px 0 12px 0;
+}
+
+header {
+  white-space: nowrap;
+  background-color: #E76D2D;
+  color: white;
+  padding: 10px 0;
+  font-size: xx-large;
+  font-style: italic;
+  text-align: center;
+}
+
+header .logo {
+  animation: flyLeft 1s ease forwards;
+}
+
+@keyframes flyLeft {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.main-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  margin: 0 auto;
+  width: 80%;
+  min-width: 400px;
+  max-width: 800px;
+  background-color: #535a627a;
+  backdrop-filter: blur(5px);
+  background: rgba(255, 255, 255, 0.6);
+}
+
+footer {
+  white-space: nowrap;
+  background-color: #E76D2D;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  padding: 5px 10px;
+  text-align: LEFT;
+}
+
+.msg-success {
+  color: green;
+  font-size: 18px;
+  text-align: center;
+}
+
+.msg-failed {
+  color: red;
+  font-size: 18px;
+  text-align: center;
+}
+
+.msg-gohome {
+  font-size: 18px;
+  text-align: center;
+}
+
+
+/* ==================== */
+/* login */
+.login-form {
+  background-color: #f7f7f7;
+  padding: 40px;
+  max-width: 300px;
+  margin: 50px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.login-form .title {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.login-form label {
+  display: block;
+  margin: 10px 0 5px 0;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"],
+.login-form input[type="email"] {
+  width: 100%;
+  font-size: 18px;
+}
+
+.remember-me {
+  margin: 10px 0;
+  display: flex;
+}
+
+.remember-me input {
+  margin: 0 5px 0 0;
+}
+
+.remember-me label {
+  margin: 0;
+}
+
+.remember-me a {
+  margin: 0 0 0 auto;
+}
+
+.login-form [type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin: 12px 0 16px 0;
+  border: none;
+  background-color: #5cb85c;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.login-help-links {
+  text-align: center;
+}
+
+
+/* ==================== */
+/* signup */
+.signup-form {
+  background-color: #f7f7f7;
+  padding: 40px 60px;
+  max-width: 350px;
+  margin: 30px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.signup-form .title {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.signup-form .error {
+  color: red;
+  display: none;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.signup-form label {
+  display: block;
+  margin: 12px 0 5px 0;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="password"],
+.signup-form input[type="email"] {
+  width: 100%;
+  font-size: 18px;
+}
+
+.signup-form .checkbox {
+  margin-top: 10px;
+}
+
+.signup-form .terms-lable {
+  display: inline;
+}
+
+.signup-form [type="submit"] {
+  padding: 10px;
+  margin: 12px 0 16px 0;
+  border: none;
+  background-color: #5cb85c;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.signup-form #resetButton {
+  background-color: red;
+  padding: 10px;
+  margin: 12px 0 16px 0;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+
+
+/* ==================== */
+/* dashboard */
+nav {
+  background-color: #f7f7f7;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  padding: 8px 16px;
+  backdrop-filter: blur(5px);
+  background: rgba(255, 255, 255, 0.6);
+}
+
+nav .space {
+  flex: 1;
+}
+
+nav .logout {
+  margin: 0 0 0 8px;
+}
+
+.dashboard .search-form {
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 18px;
+  margin: 16px;
+}
+
+.search-form input,
+.search-form select {
+  margin-top: 8px;
+  font-size: 16px;
+}
+
+.search-form .search {
+  padding: 6px;
+  border: none;
+  background-color: #5cb85c;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.search-form .reset {
+  padding: 6px;
+  background-color: red;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.dashboard .add-new-tool {
+  text-align: right;
+  margin: 0 0 16px auto;
+}
+
+.dashboard .table-container {
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 18px;
+  margin: 16px;
+  overflow: hidden;
+}
+
+.dashboard table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 4px;
+}
+
+.dashboard .tools-table [type="submit"] {
+  background: none;
+  border: none;
+  color: blue;
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+  margin-top: 6px;
+}
+
+.dashboard .tools-table [type="submit"]:hover {
+  text-decoration: none;
+  color: darkblue;
+  text-decoration: underline;
+}
+
+
+/* ==================== */
+/* edit tool */
+.edit-tool form {
+  background-color: #f7f7f7;
+  padding: 40px 60px;
+  max-width: 350px;
+  margin: 50px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.edit-tool .title {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.edit-tool label {
+  display: block;
+  margin: 10px 0 5px 0;
+}
+
+.edit-tool input[type="text"],
+.edit-tool input[type="number"] {
+  width: 100%;
+  font-size: 18px;
+}
+
+.edit-tool textarea {
+  width: 100%;
+  font-size: 16px;
+}
+
+.edit-tool .available {
+  display: inline;
+}
+
+.edit-tool .avaliable-container {
+  margin: 8px 0;
+}
+
+.edit-tool [type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin: 12px 0 16px 0;
+  border: none;
+  background-color: #5cb85c;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+
+/* ==================== */
+/* add tool */
+.add-tool form {
+  background-color: #f7f7f7;
+  padding: 40px 60px;
+  max-width: 350px;
+  margin: 50px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.add-tool .title {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.add-tool label {
+  display: block;
+  margin: 10px 0 5px 0;
+}
+
+.add-tool input[type="text"],
+.add-tool input[type="number"] {
+  width: 100%;
+  font-size: 18px;
+}
+
+.add-tool textarea {
+  width: 100%;
+  font-size: 16px;
+}
+
+.add-tool .available {
+  display: inline;
+}
+
+.add-tool .avaliable-container {
+  margin: 8px 0;
+}
+
+.add-tool [type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin: 12px 0 16px 0;
+  border: none;
+  background-color: #5cb85c;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
